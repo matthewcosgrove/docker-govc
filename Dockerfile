@@ -6,4 +6,6 @@ RUN apt-get update && \
     chmod +x /usr/local/bin/govc && \
     curl -L --output gron.tgz https://github.com/tomnomnom/gron/releases/download/v0.6.0/gron-linux-amd64-0.6.0.tgz && tar xzf gron.tgz && \
     mv gron /usr/local/bin/ && \
+    curl -L --output spruce https://github.com/geofffranks/spruce/releases/download/v1.27.0/spruce-linux-amd64 && chmod +x spruce && \
+    mv spruce /usr/local/bin && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
