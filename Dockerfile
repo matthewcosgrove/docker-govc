@@ -1,7 +1,7 @@
 FROM debian
 
 RUN apt-get update && \
-    apt-get install -y curl jq git vim python python3 python3-pip sshpass && \
+    apt-get install -y netcat curl jq git vim python python3 python3-pip sshpass && \
     curl -L https://github.com/vmware/govmomi/releases/download/v0.23.0/govc_linux_amd64.gz | gunzip > /usr/local/bin/govc && \
     chmod +x /usr/local/bin/govc && \
     curl -L --output gron.tgz https://github.com/tomnomnom/gron/releases/download/v0.6.0/gron-linux-amd64-0.6.0.tgz && tar xzf gron.tgz && \
